@@ -1,6 +1,7 @@
-require_relative 'ar.rb'
-
+#
 # Find one of the products you created in challenge_create.rb and delete it from the database.
+#
+require_relative 'ar.rb'
 
 # find a product
 dodo_product = Product.where(name: 'Dodo bird').first

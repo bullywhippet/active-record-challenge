@@ -18,6 +18,7 @@ puts any_product
 #    category_id: 2,
 #     created_at: "2011-11-18 04:48:53",
 #     updated_at: "2011-11-18 04:48:53">
+#
 # Columns = id, name, description, price,
 #           stock_quantity, category_id, created_at, updated_at
 #
@@ -46,7 +47,9 @@ low_stock_items = Product.where('stock_quantity < 5')
 puts "Number of items with low stock: #{low_stock_items.count}"
 
 
+#
 # Add to the challenge_read.rb file:
+#
 
 # Find the name of the category of one of the products you have found.
 found_product = Product.find(214)
@@ -56,7 +59,6 @@ puts found_product_category.name
 
 
 # Find a specific category and use it to build and persist a new product
-#
 
 bird_category = Category.where('name LIKE "%poultry%"').first
 

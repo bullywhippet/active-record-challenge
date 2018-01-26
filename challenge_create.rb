@@ -3,8 +3,9 @@
 #
 require_relative 'ar.rb'
 
-
+#
 # create a product way number 1
+#
 new_product_one = Product.new
 
 new_product_one.name = 'New thing one swims'
@@ -19,7 +20,9 @@ new_product_one.save
 # make sure its there
 puts new_product_one.inspect
 
+#
 # create a product way 2
+#
 new_product_two = Product.new(name: 'Big Mac Sauce',
                               description: 'Its the second new product',
                               price: 2,
@@ -29,8 +32,9 @@ new_product_two = Product.new(name: 'Big Mac Sauce',
 new_product_two.save
 puts new_product_two.inspect
 
+#
 # Create a product way 3
-
+#
 new_product_three = Product.create(name: 'Dodo bird',
                                    description: 'I think this is poultry',
                                    price: 35,
@@ -39,8 +43,10 @@ new_product_three = Product.create(name: 'Dodo bird',
 
 puts new_product_three.inspect
 
+#
 # Create a Product object that is missing some required columns.
 # Attempt to save this product and print all the AR errors which are generated.
+#
 
 bad_product = Product.new(name: 'Dog fur')
 
